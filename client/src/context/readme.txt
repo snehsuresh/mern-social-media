@@ -1,0 +1,3 @@
+// We already know have initial_state, when user clicks login it dipatches to first action that is LoginStart i.e getting email and password, then it goes to reducer, reducer will see oh it's LoginStart I better start fetching, and it sets isFetching to true.
+
+//No it dispatches to second action. There are 2 possibilities. First is LoginSuccess, it goes to reducer again and reducer updates state and user is updated from null to actual values. Error stays false. Second is LoginFailure, goes to reducer, keeps user as null and updates state of error to true.
